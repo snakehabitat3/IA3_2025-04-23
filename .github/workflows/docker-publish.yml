@@ -24,10 +24,10 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build -t yourusername/myimage:${{ env.VERSION }} .
-          docker tag yourusername/myimage:${{ env.VERSION }} yourusername/myimage:latest
+          docker build -t adamwalmsley/ia3-image:${{ env.VERSION }} .
+          docker tag adamwalmsley/ia3-image:${{ env.VERSION }} adamwalmsley/ia3-image:latest
 
       - name: Push Docker images
         run: |
-          docker push yourusername/myimage:${{ env.VERSION }}
-          docker push yourusername/myimage:latest
+          docker push adamwalmsley/ia3-image:${{ env.VERSION }}
+          docker push adamwalmsley/ia3-image:latest
